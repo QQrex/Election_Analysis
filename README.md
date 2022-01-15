@@ -71,11 +71,12 @@ Next we need to figure out how many candidates and counties are is in the csv fi
 >
 >Line 80 - Tally votes to dictionary based on county.
 
-Now that we have dictionaries of names/counties:votes we can begin to write our analysis into our election_analysis text file. Simliar to how we opened the election_results.csv, we are going to use an open
-
-
-
-
+Now that we have dictionaries of names/counties:votes we can begin to write our analysis into our election_analysis text file. Simliar to how we opened election_results.csv, we can use with open() as:, but we need to add "w" inside open() to delcare we are writing into the text file. We will write our election results into the text file and also print into the terminal to check our work.
+![WithopenWrite](https://github.com/QQrex/Election_Analysis/blob/main/Resources/With%20open%20write%20and%20print%20election.PNG)
+>line 84 - Open election_analysis.txt to write.
+>Line 87 - Create f string election result summary with formatting as varrible election_results.
+>Line 94 - Print election results in terminal.
+>Line 96 - Write election result summary to text file.
 
 
 
