@@ -30,8 +30,6 @@ winning_percentage = 0
 
 largest_county = ""
 largest_count = 0
-largest_percentage = 0
-
 
 # Read the csv and convert it into a list of dictionaries
 with open(file_to_load) as election_data:
