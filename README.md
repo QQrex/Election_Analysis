@@ -10,7 +10,7 @@ A Colorado Board of Elections employee has given you the following task to compl
 5. Calculate the precentage of votes each candidate won.
 6. Determine the winner of the election based on popluar vote.
 
-## **Analysis and Results**
+## **Analysis**
 
 Our first step is to create a path to open the election_results.csv to read and create an election_analysis.txt to save our analysis results.
 
@@ -84,7 +84,7 @@ Now that we have dictionaries of names/counties:votes we can begin to write our 
 
 Moving forward, our next step would be calculate each county's voting percentages and then determine which county had the most votes. We will utlize a for loop to loop through our count_votes dictionary to accomplish this and will print or findings into our terminal to check our work before saving it to our election_analysis.txt.
 ![forcou](https://github.com/QQrex/Election_Analysis/blob/main/Resources/For%20county.PNG)
->Line 99 - For loop to loop dictionary with county_name as keys.
+>Line 99 - For loop to loop county_votes dictionary with county_name as keys.
 >
 >Line 102 - Using get() to retrieve vote count as variable cVotes.
 >
@@ -92,41 +92,67 @@ Moving forward, our next step would be calculate each county's voting percentage
 >
 >Line 105 - Create county_result summary variable with f string.
 >
->Line 107 - Print county_result summary.
+>Line 107 - Print county_result summary to terminal.
 >
->Line 109 - Save county_results in our text file.
+>Line 109 - Write county_results in to election_analysis.txt.
 >
->Line 111 - Asking if statment "if cVote is greater than largest_county".
+>Line 111 - Asking if statement "if cVote is greater than largest_county".
 >
 >Line 112 - If if statement is true then largest_count = cVotes.
 >
 >Line 113 - If if statement is true then largest_county = county_name.
 >>
 >>The if statement to find county with the largest vote count only works because the script is still in the for loop in line 99. We set the largest_count = 0 in our variables at the start of this script and as the the for loop continues to loop through our county_votes dictionary, it is replacing the largest_count variable with largest cVote. At the end of the for loop it should have the largest county vote paired with county name.
->Line 115 - Create largest_county_summary variable with formated f string results.
+>
+>Line 115 to 118 - Create largest_county_summary variable with formated f string results.
+>
 >Line 119 - Print largest_county_summary variable to terminal.
+>
 >Line 121 - Write largest_county_summary ariable to election_analysis.txt.
+>
 
 Finally, we will calculate candidate percentages and winning candidate of the election. We will use a for loop again but instead loop through candidate_votes dictionary using candidate_name as keys and then printing to terminal / saving to election_analysis.txt.
 
 ![forcan](https://github.com/QQrex/Election_Analysis/blob/main/Resources/for%20can.PNG)
+>Line 124 - For loop to loop through candidate_votes dictionary usi.ng candidate_name list as keys
+>
+>Line 127 - Using get() to retrieve votes counts as variable votes.
+>
+>Line 128 - Calculate candidate percentages with float() by votes/total_votes * 100.
+>
+>Line 129 to 130 - Create candidate_results summary variable with f string
+>
+>Line 134 - Print candidate_results summary to terminal.
+>
+>Line 135 - Write candidate_results summary to election_analysis.txt.
+>
+>Line 139 - Asking if statement "if votes is greater than winning_count and vote_percentage is great than winning_percentage.
+>
+>Line 140 - If if statement is true then winning_count = votes.
+>
+>Line 141 - If if statement is true then winning_candidate = candidate_name.
+>
+>Line 142 - If if statement is true then winning_percentage = vote_percentage.
+>
+>>The logic behind this loop is the same as the logic we used to figure out county with largest vote count. However, we are replacing the variables to match candidates rather than counties.
+>
+>Line 139 to 142 - Create winning_candidate_summary variable with formated f string results.
+>
+>Line 151 - Print winning_candidate_summary to terminal.
+>
+>Line 154 - Write winning_candidate_summary to election_analysis.txt.
 >
 
+## Summary and Results
 
+[Results]
+![results](https://github.com/QQrex/Election_Analysis/blob/main/Resources/Terminal%20results.PNG)
 
-## Summary
-The analysis of the election shows that:
--There were "x"votes cast in the election.
--The candidates were:
-    -Candidate 1
-    -Candidate 2
-    -Candidate 3
--The Candidate results were:
-    -Candidate 1 received "x%" of the vote and "y" number of votes.
-    -Candidate 2 received "x%" of the vote and "y" number of votes.
-    -Candidate 3 received "x%" of the vote and "y" number of votes.
--The winner of the election was:
-    -Candidate (1,2, or 3), who received "x%" of the vote and "y" number of votes.
+[Summary]
+The results of our election show that:
+    -Winner: Diana DeGette
+    -Winning Vote Count: 272,892
+    -Winning Percentage: 73.8%
     
 ## **Resources**
 -Data Source: election_results.csv
