@@ -84,6 +84,7 @@ Now that we have dictionaries of names/counties:votes we can begin to write our 
 
 
 Moving forward, our next step would be calculating each county's voting percentages and then determine which county had the most votes. We will utilize a for loop to loop through our count_votes dictionary to accomplish this and will print or findings into our terminal to check our work before saving it to our election_analysis.txt.
+
 ![forcou](https://github.com/QQrex/Election_Analysis/blob/main/Resources/For%20county.PNG)
 >Line 99 - For loop to loop county_votes dictionary with county_name as keys.
 >
